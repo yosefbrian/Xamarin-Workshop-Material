@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="databaseApp.ShowTransaksi">
+
+    <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row ="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Detail Makul" />
+            <Label Grid.Row ="1" Grid.Column="1" Text="Mata Kuliah" />
+            <Label Grid.Row="1" Grid.Column="2" Text ="{Binding Trans}" />
+            <Label Grid.Row ="2" Grid.Column="1" Text="Jumlah SKS" />
+            <Label Grid.Row="2" Grid.Column="2" Text ="{Binding Amount}"/>
+            <Label Grid.Row ="3" Grid.Column="1" Text="Jadwal" />
+            <Label Grid.Row="3" Grid.Column="2" Text ="{Binding Date}"/>
+            <Label Grid.Row ="4" Grid.Column="1" Text="Info" />
+            <Label Grid.Row="4" Grid.Column="2" Text ="{Binding Info}" />
+            <Button Grid.Row ="5" Grid.Column="1" Text="Edit Makul" Clicked="OnEditClicked" />
+            <Button Grid.Row="5" Grid.Column="2" Text="Delete" Clicked="OnDeleteClicked" />
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="databaseApp.ManageTransaksi">
+    <StackLayout>
+        <ListView x:Name="lstData" HasUnevenRows="false" Header="Header Value" Footer="Footer" ItemSelected="OnSelection" >
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" BackgroundColor="Blue" Padding="5,5,5,5">
+                        <Label Text="Makul" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                        <Label Text="SKS" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                        <Label Text="Jadwal" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
+                            <Label Text="{Binding Trans}" FontSize="Medium" />
+                            <Label Text="{Binding Amount}" FontSize="Medium" />
+                            <Label Text="{Binding Date}" FontSize="Medium" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.FooterTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
+                        <Button Text="Tambahkan Makul Baru" Clicked="OnNewClicked" />
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.FooterTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

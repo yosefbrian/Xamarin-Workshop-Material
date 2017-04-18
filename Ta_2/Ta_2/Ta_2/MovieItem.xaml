@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Upcoming Movie" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ta_2.MovieItem">
+
+        <ListView x:Name="listView" ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!--<ViewCell>
+                        <StackLayout Padding="20,0,0,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                            <Label Text="{Binding Title}" VerticalTextAlignment="Center" />
+                            <Image Source="{Binding ImageUrl}" IsVisible="True" />
+                        </StackLayout>
+                    </ViewCell>-->
+                    <ImageCell ImageSource="{Binding ImageUrl}" Text="{Binding Title}" Detail="{Binding PubDate}" />
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+  
+
+</ContentPage>

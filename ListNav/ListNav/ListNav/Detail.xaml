@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListNav.Detail">
+
+    <StackLayout>
+
+        <StackLayout Padding="5, 25">
+            <Label x:Name="title"  
+                 Font="Bold,Large" 
+                 HorizontalOptions="Center" />
+            <Image x:Name="image"  
+                 WidthRequest="200" 
+                 HeightRequest="200" />
+            <StackLayout Padding="50, 10">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="info :" 
+                     HorizontalOptions="FillAndExpand" />
+                    <Label x:Name="info"  
+                     Font="Bold,Medium" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+
+        <Button x:Name="btnBack" Text="BACK"/>
+
+      
+        
+
+    </StackLayout>
+</ContentPage>
